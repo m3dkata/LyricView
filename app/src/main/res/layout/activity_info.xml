@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".InfoActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Аудио: "
+        android:textSize="15dp"
+        android:textAllCaps="true"
+        android:layout_marginTop="50sp"
+        android:textColor="@color/purple_700"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Текст: Реджеп Бърган"
+        android:textSize="15dp"
+        android:textAllCaps="true"
+        android:layout_marginTop="20sp"
+        android:textColor="@color/purple_700"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Разработчик: Мехмед Черкез"
+        android:textSize="15dp"
+        android:textAllCaps="true"
+        android:layout_marginTop="20sp"
+        android:textColor="@color/purple_700"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/kidneyLogo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="100sp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/kidney" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COPYRIGHT © 2022 KIDNEY. ALL RIGHTS RESERVED."
+        android:textSize="15dp"
+        android:textAllCaps="true"
+        android:layout_marginTop="1sp"
+        android:textColor="@color/purple_700"
+        android:textAlignment="center"/>
+
+
+</LinearLayout>

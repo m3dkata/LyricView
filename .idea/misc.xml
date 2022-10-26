@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/arrow.xml" value="0.284" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/next_btn.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/pause_btn.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/play_btn.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/previous_btn.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/repeat_btn_off.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/repeat_btn_on.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/soundmax.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/soundmin.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable-v24/sura_icon.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/arrow.xml" value="0.239" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/arrow1.xml" value="0.284" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/background.xml" value="0.245" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/down_arrow.xml" value="0.2875" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/info_icon.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/kidney.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/menu_icon.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/namaz_time.xml" value="0.245" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/play_activity.xml" value="0.228" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/spinner_arrow.xml" value="0.245" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/drawable/spinner_style.xml" value="0.245" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/activity_book_.xml" value="0.22" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/activity_info.xml" value="0.23097826086956522" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/activity_main.xml" value="0.1078125" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/activity_music_player.xml" value="0.33" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/activity_namaz.xml" value="0.25" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/cardveiw_item_book.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/recycler_item.xml" value="0.2" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/recycler_item1.xml" value="0.22239583333333332" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/layout/spinner_item.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/M3Dkata/BreznitsaSuri2/app/src/main/res/menu/menu.xml" value="0.31354166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
