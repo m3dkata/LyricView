@@ -39,6 +39,9 @@
             android:textStyle="bold" />
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
         <TextView
             android:id="@+id/music_title_text"
             android:layout_width="match_parent"
@@ -50,7 +53,8 @@
             android:textColor="@color/white"
             android:textSize="12sp" />
         <TextView
-            android:id="@+id/music_title_text"
+            android:id="@+id/dua_opisanie"
+            android:layout_below="@+id/music_title_text"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@color/purple_700"
@@ -59,6 +63,8 @@
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="12sp" />
+        </RelativeLayout>
+
 
     </LinearLayout>
 

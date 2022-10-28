@@ -48,6 +48,7 @@ public class SuriListAdapter extends RecyclerView.Adapter<SuriListAdapter.ViewHo
         holder.titleTextView.setText(suriData.name);
         holder.iconImageView.setImageResource(suriData.getSuraimage());
         holder.duaNumber.setText(Integer.toString(suriData.suraimage));
+        holder.duaOpisanie.setText(suriData.opisanie);
         if(MyMediaPlayer.currentIndex==position)
             holder.titleTextView.setTextColor(Color.parseColor("#FF0000"));
         else{
@@ -87,12 +88,15 @@ public class SuriListAdapter extends RecyclerView.Adapter<SuriListAdapter.ViewHo
         TextView titleTextView;
         ImageView iconImageView;
         TextView duaNumber;
+        TextView duaOpisanie;
         CardView cardView ;
         public ViewHolder(View itemView) {
             super(itemView);
             titleTextView = itemView.findViewById(R.id.music_title_text);
             iconImageView = itemView.findViewById(R.id.icon_view);
             duaNumber = itemView.findViewById(R.id.duaNumber);
+            duaOpisanie = itemView.findViewById(R.id.dua_opisanie);
+
 
         }
     }
