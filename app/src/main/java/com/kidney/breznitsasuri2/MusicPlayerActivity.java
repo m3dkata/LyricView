@@ -263,7 +263,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
 
         currentSong = suriList.get(MyMediaPlayer.currentIndex);
 
-        setTitle(suriList.get(currentIndex).getName());
+        setTitle(suriList.get(currentIndex).getOpisanie());
         pausePlay.setOnClickListener(v -> pausePlay());
         next.setOnClickListener(v -> playNextSong());
         prev.setOnClickListener(v -> playPreviousSong());
