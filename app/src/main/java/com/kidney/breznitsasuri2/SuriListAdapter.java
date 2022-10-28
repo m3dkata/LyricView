@@ -49,8 +49,11 @@ public class SuriListAdapter extends RecyclerView.Adapter<SuriListAdapter.ViewHo
         holder.iconImageView.setImageResource(suriData.getSuraimage());
         holder.duaNumber.setText(Integer.toString(suriData.suraimage));
         holder.duaOpisanie.setText(suriData.opisanie);
-        if(MyMediaPlayer.currentIndex==position)
-            holder.titleTextView.setTextColor(Color.parseColor("#FF0000"));
+        if(MyMediaPlayer.currentIndex==position){
+            holder.titleTextView.setTextColor(Color.parseColor("#2bff01"));
+            holder.duaNumber.setTextColor(Color.parseColor("#2bff01"));
+            holder.duaOpisanie.setTextColor(Color.parseColor("#2bff01"));
+        }
         else{
             holder.titleTextView.setTextColor(Color.parseColor("#FFFFFF"));
         }

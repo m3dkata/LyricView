@@ -4,29 +4,32 @@
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="72dp"
     android:layout_columnWeight="1"
     android:layout_rowWeight="1"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
-    cardview:cardCornerRadius="4dp"
+    cardview:cardCornerRadius="2dp"
     android:focusable="true">
 
     <LinearLayout
         android:orientation="horizontal"
+        android:background="@drawable/dua_item_border"
+        android:padding="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="@drawable/dua_vector">
+            android:background="@drawable/dua_vector"
+>
             <ImageView
                 android:id="@+id/icon_view"
-                android:layout_width="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:background="#2d2d2d"
+                android:background="#4D754A3C"
                 android:src="@drawable/fatiha"/>
         <TextView
             android:id="@+id/duaNumber"
@@ -34,27 +37,28 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="1"
-            android:textColor="@color/purple_700"
-            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
             android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp">
+            android:layout_height="70dp"
+            android:backgroundTint="@color/purple_700">
         <TextView
             android:id="@+id/music_title_text"
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:layout_below="@+id/dua_opisanie"
             android:background="@color/purple_700"
             android:gravity="center"
             android:text="Сура"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:textSize="17sp" />
         <TextView
             android:id="@+id/dua_opisanie"
-            android:layout_below="@+id/music_title_text"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@color/purple_700"
@@ -62,7 +66,8 @@
             android:text="Описание"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:textStyle="bold"
+            android:textSize="17sp" />
         </RelativeLayout>
 
 
