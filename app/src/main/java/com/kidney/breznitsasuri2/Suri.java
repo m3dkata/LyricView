@@ -6,21 +6,25 @@ public class Suri implements Serializable {
 
     String name;
     int currentIndex, suraimage;
+    String opisanie;
 
-    public Suri(String name, int currentIndex, int suraimage) {
+    public Suri(String name, int currentIndex, int suraimage, String opisanie) {
         this.name = name;
         this.currentIndex = currentIndex;
         this.suraimage = suraimage;
+        this.opisanie = opisanie;
     }
 
     public String getName() {
         return name;
     }
-
+    public String getOpisanie() {
+        return opisanie;
+    }
     public void setName(String name) {
         this.name = name;
     }
-
+    public void setOpisanie(String opisanie) {this.opisanie = opisanie; }
     public int getCurrentIndex() {
         return currentIndex;
     }
@@ -41,4 +45,5 @@ public class Suri implements Serializable {
     public String toString(){
         return name;
     }
+
 }

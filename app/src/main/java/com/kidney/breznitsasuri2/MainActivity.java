@@ -39,30 +39,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initSearchWidgets();
-        setTitle("         СУРИ");
+        setTitle("     ДУИ ОТ КОРАНА");
         centerTitle();
 
         recyclerView = findViewById(R.id.recycler_view);
 
         suriList = new ArrayList<Suri>();
-        suriList.add(new Suri("Ал-Фатиха - الفاتحة", 0, R.drawable.fatiha));
-        suriList.add(new Suri("Ал-Бакара - البقرة", 1, R.drawable.baqara));
-        suriList.add(new Suri("Ал-Имран - آل عمران", 2, R.drawable.imran));
-        suriList.add(new Suri("Ан-Ниса - النساء", 3, R.drawable.nisa));
-        suriList.add(new Suri("Ал-Маида - المائدة", 4, R.drawable.fatiha2));
-        suriList.add(new Suri("Ал-Анам - الأنعام", 5, R.drawable.baqara2));
-        suriList.add(new Suri("Ал-Араф - الأعراف", 6, R.drawable.imran2));
-        suriList.add(new Suri("Ал-Анфал - الأنفال", 7, R.drawable.nisa2));
-        suriList.add(new Suri("Ат-Тауба - التوبة", 8, R.drawable.fatiha3));
-        suriList.add(new Suri("Юнус - يونس", 9, R.drawable.baqara3));
-        suriList.add(new Suri("Худ - هود", 10, R.drawable.imran3));
-        suriList.add(new Suri("Юсуф - يوسف", 11, R.drawable.nisa3));
-        suriList.add(new Suri("Ар-Раад - الرعد", 12, R.drawable.imran));
-        suriList.add(new Suri("Ибрахим - ابراهيم", 13, R.drawable.fatiha));
+        suriList.add(new Suri("Ал-Фатиха - الفاتحة", 0, 1, "Ал-Бакара - البقرة, Аят 127"));
+        suriList.add(new Suri("Ал-Бакара - البقرة", 1, 2,"Ал-Бакара - البقرة, Аят 128"));
+        suriList.add(new Suri("Ал-Имран - آل عمران", 2, 3,"Ал-Бакара - البقرة, Аят 201"));
+        suriList.add(new Suri("Ан-Ниса - النساء", 3, 4,"Ал-Бакара - البقرة, Аят 250"));
+        suriList.add(new Suri("Ал-Маида - المائدة", 4, 5,"Ал-Бакара - البقرة, Аят 286"));
+        suriList.add(new Suri("Ал-Анам - الأنعام", 5, 6,"Ал-Имран - آل عمران, Аят 8"));
+        suriList.add(new Suri("Ал-Араф - الأعراف", 6, 7,"Ал-Имран - آل عمران, Аят 9"));
+        suriList.add(new Suri("Ал-Анфал - الأنفال", 7, 8,"Ал-Имран - آل عمران, Аят 16"));
+        suriList.add(new Suri("Ат-Тауба - التوبة", 8, 9,"Ал-Имран - آل عمران, Аят 53"));
+        suriList.add(new Suri("Юнус - يونس", 9, 10,"Ал-Имран - آل عمران, Аят 147"));
+        suriList.add(new Suri("Худ - هود", 10, 11,"Ал-Имран - آل عمران, Аят 191"));
+        suriList.add(new Suri("Юсуф - يوسف", 11, 12,"Ал-Имран - آل عمران, Аят 192"));
+        suriList.add(new Suri("Ар-Раад - الرعد", 12, 13,"Ал-Имран - آل عمران, Аят 193"));
+        suriList.add(new Suri("Ибрахим - ابراهيم", 13, 14,"Ал-Имран - آل عمران, Аят 194"));
 
 
 
-        recyclerView.setLayoutManager(new GridLayoutManager(this,4));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,1));
         SuriListAdapter suriAdapter = new SuriListAdapter(suriList,this);
         recyclerView.setAdapter(suriAdapter);
 
