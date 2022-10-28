@@ -104,6 +104,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
         Intent intent = getIntent();
         suriList = (ArrayList<Suri>) getIntent().getSerializableExtra("LIST");
 
+
         //suraAudio = getIntent().getParcelableExtra("suriAudio");
 
 

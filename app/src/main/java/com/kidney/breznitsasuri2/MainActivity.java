@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view);
 
         suriList = new ArrayList<Suri>();
-        suriList.add(new Suri("Ал-Фатиха - الفاتحة", 0, 1, "Ал-Бакара - البقرة, Аят 127"));
+        suriList.add(new Suri("Ал-Бакара, Аят 127", 0, 1, "البقرة"));
         suriList.add(new Suri("Ал-Бакара - البقرة", 1, 2,"Ал-Бакара - البقرة, Аят 128"));
         suriList.add(new Suri("Ал-Имран - آل عمران", 2, 3,"Ал-Бакара - البقرة, Аят 201"));
         suriList.add(new Suri("Ан-Ниса - النساء", 3, 4,"Ал-Бакара - البقرة, Аят 250"));
