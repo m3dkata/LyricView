@@ -46,19 +46,19 @@ public class MainActivity extends AppCompatActivity {
 
         suriList = new ArrayList<Suri>();
         suriList.add(new Suri("Ал-Бакара, Аят 127", 0, 1, "البقرة"));
-        suriList.add(new Suri("Ал-Бакара - البقرة", 1, 2,"Ал-Бакара - البقرة, Аят 128"));
-        suriList.add(new Suri("Ал-Имран - آل عمران", 2, 3,"Ал-Бакара - البقرة, Аят 201"));
-        suriList.add(new Suri("Ан-Ниса - النساء", 3, 4,"Ал-Бакара - البقرة, Аят 250"));
-        suriList.add(new Suri("Ал-Маида - المائدة", 4, 5,"Ал-Бакара - البقرة, Аят 286"));
-        suriList.add(new Suri("Ал-Анам - الأنعام", 5, 6,"Ал-Имран - آل عمران, Аят 8"));
-        suriList.add(new Suri("Ал-Араф - الأعراف", 6, 7,"Ал-Имран - آل عمران, Аят 9"));
-        suriList.add(new Suri("Ал-Анфал - الأنفال", 7, 8,"Ал-Имран - آل عمران, Аят 16"));
-        suriList.add(new Suri("Ат-Тауба - التوبة", 8, 9,"Ал-Имран - آل عمران, Аят 53"));
-        suriList.add(new Suri("Юнус - يونس", 9, 10,"Ал-Имран - آل عمران, Аят 147"));
-        suriList.add(new Suri("Худ - هود", 10, 11,"Ал-Имран - آل عمران, Аят 191"));
-        suriList.add(new Suri("Юсуф - يوسف", 11, 12,"Ал-Имран - آل عمران, Аят 192"));
-        suriList.add(new Suri("Ар-Раад - الرعد", 12, 13,"Ал-Имран - آل عمران, Аят 193"));
-        suriList.add(new Suri("Ибрахим - ابراهيم", 13, 14,"Ал-Имран - آل عمران, Аят 194"));
+        suriList.add(new Suri("Ал-Бакара, Аят 128", 1, 2,"البقرة"));
+        suriList.add(new Suri("Ал-Бакара, Аят 201", 2, 3,"البقرة"));
+        suriList.add(new Suri("Ал-Бакара, Аят 250", 3, 4,"البقرة"));
+        suriList.add(new Suri("Ал-Бакара, Аят 286", 4, 5,"البقرة"));
+        suriList.add(new Suri("Ал-Имран, Аят 8", 5, 6,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 9", 6, 7,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 16", 7, 8,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 53", 8, 9,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 147", 9, 10,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 191", 10, 11,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 192", 11, 12,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 193", 12, 13,"آل عمران"));
+        suriList.add(new Suri("Ал-Имран, Аят 194", 13, 14,"آل عمران"));
 
 
 
