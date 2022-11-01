@@ -2,12 +2,6 @@ package com.kidney.breznitsasuri2;
 
 import static com.kidney.breznitsasuri2.MyMediaPlayer.currentIndex;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
@@ -30,6 +24,11 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.lauzy.freedom.library.Lrc;
 import com.lauzy.freedom.library.LrcHelper;
 import com.lauzy.freedom.library.LrcView;
@@ -43,7 +42,7 @@ import java.util.List;
 public class MusicPlayerActivity extends AppCompatActivity {
 
     ImageView pausePlay, prev, next, repeat;
-    LrcView suraText;
+    LrcView suraText, suraTexttr, suraTextpr;
     SeekBar mSeekBarTime, mSeekBarVol;
     ArrayList<Suri> suriList;
     Suri currentSong;
@@ -73,6 +72,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_player);
 
+
         //mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         assert getSupportActionBar() != null;   //null check
@@ -83,6 +83,8 @@ public class MusicPlayerActivity extends AppCompatActivity {
         next = findViewById(R.id.next);
 
         suraText = findViewById(R.id.suraText);
+        suraTexttr = findViewById(R.id.suraTexttr);
+        suraTextpr = findViewById(R.id.suraTextpr);
         mSeekBarTime = findViewById(R.id.seekBarTime);
         mSeekBarVol = findViewById(R.id.seekBarVol);
         repeat = findViewById(R.id.repeat);
@@ -113,6 +115,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
         songNames();
         centerTitle();
 
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -135,26 +138,35 @@ public class MusicPlayerActivity extends AppCompatActivity {
                 if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                     mSeekBarTime.setProgress(mediaPlayer.getCurrentPosition());
                     suraText.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTexttr.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTextpr.updateTime(mediaPlayer.getCurrentPosition());
                     pausePlay.setImageResource(R.drawable.play_btn);
                 }
                 if (mediaPlayer.isPlaying()) {
                     pausePlay.setImageResource(R.drawable.pause_btn);
                     suraText.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTexttr.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTextpr.updateTime(mediaPlayer.getCurrentPosition());
 
                 } else {
                     pausePlay.setImageResource(R.drawable.play_btn);
                     suraText.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTexttr.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTextpr.updateTime(mediaPlayer.getCurrentPosition());
 
                 }
                 new Handler().postDelayed(this, 100);
             }
         });
 
+
         mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (mediaPlayer != null && fromUser) {
                     suraText.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTexttr.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTextpr.updateTime(mediaPlayer.getCurrentPosition());
                     mediaPlayer.seekTo(progress);
                 }
             }
@@ -194,6 +206,8 @@ public class MusicPlayerActivity extends AppCompatActivity {
                 if (fromUser) {
                     mediaPlayer.seekTo(progress);
                     suraText.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTexttr.updateTime(mediaPlayer.getCurrentPosition());
+                    suraTextpr.updateTime(mediaPlayer.getCurrentPosition());
                     mSeekBarTime.setProgress(progress);
                 }
             }
@@ -213,6 +227,8 @@ public class MusicPlayerActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 suraText.setLrcTextSize(Float.valueOf(i));
+                suraTexttr.setLrcTextSize(Float.valueOf(i));
+                suraTextpr.setLrcTextSize(Float.valueOf(i));
 
             }
 
@@ -227,6 +243,26 @@ public class MusicPlayerActivity extends AppCompatActivity {
             }
 
         });
+
+        suraText.setOnPlayIndicatorLineListener(new LrcView.OnPlayIndicatorLineListener() {
+            @Override
+            public void onPlay(long time, String content) {
+                mediaPlayer.seekTo((int) time);
+            }
+        });
+        suraTexttr.setOnPlayIndicatorLineListener(new LrcView.OnPlayIndicatorLineListener() {
+            @Override
+            public void onPlay(long time, String content) {
+                mediaPlayer.seekTo((int) time);
+            }
+        });
+        suraTextpr.setOnPlayIndicatorLineListener(new LrcView.OnPlayIndicatorLineListener() {
+            @Override
+            public void onPlay(long time, String content) {
+                mediaPlayer.seekTo((int) time);
+            }
+        });
+
 
 //        suraText.setOnTouchListener(new OnSwipeTouchListener(context) {
 //            @Override
@@ -321,33 +357,89 @@ public class MusicPlayerActivity extends AppCompatActivity {
 
 
     private void songNames() {
-        if (currentSong.currentIndex == 0) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 0) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 1) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002002.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 1) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 2) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 2) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 3) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 3) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 4) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 4) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 5) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 5) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 6) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 6) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 7) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 7) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 8) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 8) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 9) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 9) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 10) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 10) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 11) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 11) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 12) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 12) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
-        if (currentSong.currentIndex == 13) { List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);}
+        if (currentSong.currentIndex == 13) {
+            List<Lrc> lrcs = LrcHelper.parseLrcFromAssets(this, "002001.lrc");suraText.setLrcData(lrcs);
+            List<Lrc> lrcsTR = LrcHelper.parseLrcFromAssets(this, "002001tr.lrc");suraTexttr.setLrcData(lrcsTR);
+            List<Lrc> lrcsPR = LrcHelper.parseLrcFromAssets(this, "002001pr.lrc");suraTextpr.setLrcData(lrcsPR);
+        }
 
     }
 

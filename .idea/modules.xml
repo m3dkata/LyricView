@@ -7,6 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BreznitsaSuri2.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BreznitsaSuri2.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BreznitsaSuri2.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BreznitsaSuri2.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BreznitsaSuri2.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BreznitsaSuri2.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library/BreznitsaSuri2.library.unitTest.iml" />
     </modules>
   </component>
 </project>

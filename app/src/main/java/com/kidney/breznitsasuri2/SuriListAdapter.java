@@ -4,22 +4,15 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.MediaPlayer;
-import android.net.Uri;
-import android.os.Environment;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.File;
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class SuriListAdapter extends RecyclerView.Adapter<SuriListAdapter.ViewHolder>{
@@ -71,7 +64,7 @@ public class SuriListAdapter extends RecyclerView.Adapter<SuriListAdapter.ViewHo
                 MyMediaPlayer.getInstance().reset();
                 MyMediaPlayer.currentIndex = position;
                 Intent intent = new Intent(context,MusicPlayerActivity.class);
-                intent.putExtra("LIST",suriList);
+                intent.putExtra("LIST", suriList);
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);

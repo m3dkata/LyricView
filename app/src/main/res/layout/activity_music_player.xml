@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/teal_200"
     tools:context=".MusicPlayerActivity">
 
     <LinearLayout
@@ -21,14 +21,56 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
             app:currentIndicateLrcColor="@color/purple_700"
             app:indicatorTextColor="@color/purple_700"
+            app:lrcCurrentTextColor="@color/purple_700"
+            app:lrcNormalTextColor="@color/white_semi"
             app:lrcTextSize="25sp"
+            app:playIconWidth="25dp"
+            app:playIconHeight="25dp"
             app:isLrcCurrentTextBold="true"
             app:isLrcIndicatorTextBold="true"
-            app:playIcon="@drawable/play_btn" />
+            app:playIcon="@drawable/play_line" />
+        <com.lauzy.freedom.library.LrcView
+            android:id="@+id/suraTexttr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            app:currentIndicateLrcColor="@color/purple_500"
+            app:indicatorTextColor="@color/purple_500"
+            app:lrcCurrentTextColor="@color/purple_500"
+            app:lrcNormalTextColor="@color/white_semi"
+            app:lrcTextSize="25sp"
+            app:playIconWidth="25dp"
+            app:playIconHeight="25dp"
+            app:isLrcCurrentTextBold="true"
+            app:isLrcIndicatorTextBold="true"
+            app:playIcon="@drawable/play_line" />
+        <com.lauzy.freedom.library.LrcView
+            android:id="@+id/suraTextpr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            app:currentIndicateLrcColor="@color/black"
+            app:indicatorTextColor="@color/black"
+            app:lrcCurrentTextColor="@color/black"
+            app:lrcNormalTextColor="@color/white_semi"
+            app:lrcTextSize="25sp"
+            app:playIconWidth="25dp"
+            app:playIconHeight="25dp"
+            app:isLrcCurrentTextBold="true"
+            app:isLrcIndicatorTextBold="true"
+            app:playIcon="@drawable/play_line" />
 
         <LinearLayout
             android:layout_width="match_parent"
